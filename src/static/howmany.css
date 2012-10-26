@@ -16,10 +16,10 @@ body {
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
+	text-align: center;
 }
 
 #howmany {
-	text-align: center;
 	color: #222;
 	text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 	font-family: sans-serif;
@@ -27,7 +27,6 @@ body {
 
 #count {
 	color: #fff;
-    text-align: center;
     text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
     font-family: 'ChunkFiveRegular';
     opacity: 0.7;
@@ -38,8 +37,4 @@ body {
 	left: 0px;
 	bottom: 0px;
 	opacity: 0.7;
-}
-
-#fb-file {
-	text-align: center;
 }
