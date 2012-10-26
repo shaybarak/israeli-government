@@ -25,6 +25,9 @@ class Archive(object):
     def reload(cls):
         cls._archive = []
 
+        if not os.path.exists(DATA_DIR):
+            os.mkdir(DATA_DIR)
+
         files = os.listdir(DATA_DIR)
         for fn in files:
             # filename format: YYYY-MM-DD.json
