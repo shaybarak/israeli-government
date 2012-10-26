@@ -23,7 +23,7 @@ class Archive(object):
 
     @classmethod
     def reload(cls):
-        cls._archive = []
+        archive = []
 
         if not os.path.exists(DATA_DIR):
             os.mkdir(DATA_DIR)
@@ -34,7 +34,9 @@ class Archive(object):
             dates = re.findall('(....-..-..)\.json', fn)
             if len(dates) == 1:
                 date = dates[0]
-                cls._archive.append(ArchiveItem(fn, date))
+                archive.append(ArchiveItem(fn, date))
+
+        cls._archive = sorted(archive, key = lambda item : item.date, reverse = True)
 
     @classmethod
     def archive(cls):
@@ -43,7 +45,7 @@ class Archive(object):
     @classmethod
     def latest(cls):
         if cls._archive:
-            return max(cls._archive, key = lambda item : item.date)
+            return cls._archive[0]
         else:
             return None
 
@@ -57,4 +59,4 @@ class Archive(object):
         fn = date + '.json'
         json.dump(members, file(os.path.join(DATA_DIR, fn), 'wb'))
 
-        cls._archive.append(ArchiveItem(fn, date))
+        cls.reload()
