@@ -5,4 +5,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html', how_many = len(Archive.latest().members))
+    return render_template('howmany.html', how_many = len(Archive.latest().members))
