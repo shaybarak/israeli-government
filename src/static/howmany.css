@@ -11,9 +11,6 @@
 
 body {
 	direction: rtl;
-	background: url('mishkan-background.jpg') no-repeat center center fixed;
-	background-size: 100%; /* For browsers that don't support cover */
-	background-size: cover;
 	text-align: center;
 }
 
@@ -35,4 +32,24 @@ body {
 	left: 0px;
 	bottom: 0px;
 	opacity: 0.7;
+}
+
+#bg {
+	position:fixed; 
+	top:-50%; 
+	left:-50%; 
+	width:200%; 
+	height:200%;
+	z-index: -1;
+}
+
+#bg img {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	right:0; 
+	bottom:0; 
+	margin:auto; 
+	min-width:50%;
+	min-height:50%;
 }
