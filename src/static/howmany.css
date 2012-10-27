@@ -11,10 +11,7 @@
 
 body {
 	direction: rtl;
-	background-image:url('mishkan-background.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
+	background: url('mishkan-background.jpg') no-repeat center center fixed;
 	background-size: 100%; /* For browsers that don't support cover */
 	background-size: cover;
 	text-align: center;
